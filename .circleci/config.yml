@@ -12,11 +12,19 @@ jobs:
   test:
     docker:
       - image: circleci/node:8.9
-    working_directory: ~/promos
+    working_directory: ~/repo
     steps:
       - checkout
-      - run: echo "testing stuff"
+      - restore_cache:
+          keys:
+          - v1-dependencies-{{ checksum "package.json" }}
+          - v1-dependencies-
       - run: npm install
+      - save_cache:
+          paths:
+            - node_modules
+          key: v1-dependencies-{{ checksum "package.json" }}
+      - run: echo "testing stuff"
       - run: npm test
 
 workflows:
