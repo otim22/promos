@@ -1,4 +1,4 @@
-# Promos API Docs
+# Promos API Doc
 
 # Set up
 
