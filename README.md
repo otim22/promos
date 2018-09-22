@@ -15,7 +15,7 @@ $ docker-compose ps
 # Execute into the container
 $ docker exec -it container_name sh
 
-# Run npm install
+# Install dependences 
 $ npm install
 
 # Stop the container
