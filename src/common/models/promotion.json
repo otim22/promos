@@ -1,0 +1,44 @@
+{
+  "name": "Promotion",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "id": {
+      "type": "number"
+    },
+    "eventId": {
+      "type": "number",
+      "required": true
+    },
+    "code": {
+      "type": "string"
+    },
+    "amount": {
+      "type": "number",
+      "required": true
+    },
+    "radius": {
+      "type": "number",
+      "required": true
+    },
+    "activated": {
+      "type": "boolean"
+    },
+    "expired": {
+      "type": "boolean"
+    },
+    "createdAt": {
+      "type": "string"
+    },
+    "updatedAt": {
+      "type": "string"
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}

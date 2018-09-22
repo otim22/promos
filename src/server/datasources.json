@@ -1,0 +1,11 @@
+{
+  "promosdb": {
+    "host": "promosdb",
+    "port": 5432,
+    "database": "promos_api",
+    "password": "12qwaszx",
+    "name": "promosdb",
+    "user": "promos_api",
+    "connector": "postgresql"
+  }
+}

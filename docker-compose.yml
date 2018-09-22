@@ -1,0 +1,31 @@
+version: '3.5'
+
+services:
+    promos:
+        container_name: promoscontainerapi
+        build: ./
+        volumes:
+          - ./src/:/usr/src/promos
+        ports:
+          - 3000:3000
+        links:
+            - promosdb:promosdb
+    promosdb:
+        restart: always
+        container_name: promosdbcontainer
+        image: postgres:latest
+        volumes:
+          - data:/var/lib/postgresql
+          - ./postgres/docker-entrypoint-initdb.d:/docker-entrypoint-initdb.d
+        env_file:
+          - env
+        expose:
+          - "5432"
+    data:
+        restart: always
+        image: alpine
+        volumes:
+          - data:/var/lib/postgresql
+        command: "true"
+volumes:
+    data:

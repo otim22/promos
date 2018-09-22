@@ -1,0 +1,42 @@
+{
+  "_meta": {
+    "sources": [
+      "loopback/common/models",
+      "loopback/server/models",
+      "../common/models",
+      "./models"
+    ],
+    "mixins": [
+      "loopback/common/mixins",
+      "loopback/server/mixins",
+      "../common/mixins",
+      "./mixins"
+    ]
+  },
+  "User": {
+    "dataSource": "promosdb"
+  },
+  "AccessToken": {
+    "dataSource": "promosdb",
+    "public": false
+  },
+  "ACL": {
+    "dataSource": "promosdb",
+    "public": false
+  },
+  "RoleMapping": {
+    "dataSource": "promosdb",
+    "public": false,
+    "options": {
+      "strictObjectIDCoercion": true
+    }
+  },
+  "Role": {
+    "dataSource": "promosdb",
+    "public": false
+  },
+  "Promotion": {
+    "dataSource": "promosdb",
+    "public": true
+  }
+}

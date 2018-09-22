@@ -1,0 +1,5 @@
+DB_NAME=promos_api
+DB_USER=promos_api
+DB_PASS=12qwaszx
+DB_SERVICE=postgres
+DB_PORT=5432
