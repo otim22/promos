@@ -4,7 +4,6 @@ jobs:
   build:
     docker:
       - image: circleci/node:8.9
-    working_directory: ~/repo/src
     steps:
       - checkout
       - run: echo "npm installing"
@@ -13,11 +12,10 @@ jobs:
   test:
     docker:
       - image: circleci/node:8.9
-    working_directory: ~/repo/src
     steps:
       - checkout
-      - run: npm install
       - run: echo "testing stuff"
+      - run: npm install
       - run: npm test
 
 workflows:
