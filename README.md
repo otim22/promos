@@ -1,4 +1,5 @@
 # Promos API Doc
+[![CircleCI](https://circleci.com/gh/otim22/promos.svg?style=svg)](https://circleci.com/gh/otim22/promos)
 
 # Set up
 
