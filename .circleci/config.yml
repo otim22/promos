@@ -21,8 +21,8 @@ jobs:
       - image: circleci/node:8.9
     steps:
       - checkout
-      - run: cd promos/src && npm install
-      - run: cd promos/src && npm test
+      - run: cd ~/promos/src && npm install
+      - run: cd ~/promos/src && npm test
 
 workflows:
   version: 2
