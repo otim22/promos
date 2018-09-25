@@ -4,7 +4,7 @@ jobs:
   build:
     docker:
       - image: circleci/node:8.9
-    working_directory: ~/repo
+    working_directory: ~/promos
     steps:
       - checkout
       - run: echo "npm installing"
@@ -14,7 +14,7 @@ jobs:
   test:
     docker:
       - image: circleci/node:8.9
-    working_directory: ~/repo
+    working_directory: ~/promos
     steps:
       - checkout
       - restore_cache:
