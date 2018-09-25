@@ -7,13 +7,8 @@ jobs:
       - image: circleci/node:8.9
     steps:
       - checkout
-      - run:
-          name: Update npm
-          command: echo 'npm installing'
-          command: 'sudo npm install -g npm@latest'
-      - run:
-          name: Install npm wee
-          command: npm install
+      - run: echo "npm installing"
+      - run: npm install
 
   test:
     working_directory: ~/promos
@@ -21,7 +16,7 @@ jobs:
       - image: circleci/node:8.9
     steps:
       - checkout
-      - run: cd ~/promos/src && npm install
+      - run: echo "running tests"
       - run: cd ~/promos/src && npm test
 
 workflows:
