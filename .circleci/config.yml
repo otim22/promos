@@ -1,4 +1,4 @@
-version: 2
+version: 2.0
 
 jobs:
   build:
@@ -9,18 +9,14 @@ jobs:
       - checkout
       - run:
           name: Update npm
+          command: echo 'npm installing'
           command: 'sudo npm install -g npm@latest'
-      - restore_cache:
-          key: dependency-cache-{{ checksum "package.json" }}
       - run:
           name: Install npm wee
           command: npm install
-      - save_cache:
-          key: dependency-cache-{{ checksum "package.json" }}
-          paths:
-            - node_modules
 
   test:
+    working_directory: ~/promos
     docker:
       - image: circleci/node:8.9
     steps:
