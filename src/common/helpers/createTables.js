@@ -160,6 +160,7 @@ module.exports = {
       },
     };
 
+    /* eslint-disable max-len */
     promosdb.discoverModelProperties('promotions', function(err, props) {
       if (Object.keys(props).length === 0) {
         promosdb.createModel(promosSchema.name, promosSchema.properties, promosSchema.options);
@@ -170,6 +171,7 @@ module.exports = {
         });
       }
     });
+    /* eslint-enable max-len */
   },
 
 };
