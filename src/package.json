@@ -10,7 +10,7 @@
     "start": "node .",
     "posttest": "npm run lint && nsp check",
     "test": "mocha --timeout 10000",
-    "db": "node database/migrate.js"
+    "db": "babel-node database/migrate.js"
   },
   "dependencies": {
     "chai": "^4.1.2",
@@ -22,6 +22,7 @@
     "loopback-boot": "^2.6.5",
     "loopback-component-explorer": "^6.0.0",
     "loopback-connector-postgresql": "^3.4.0",
+    "loopback-seed": "^1.0.1",
     "mocha": "^5.2.0",
     "serve-favicon": "^2.0.1",
     "strong-error-handler": "^3.0.0"

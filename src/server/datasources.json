@@ -1,6 +1,6 @@
 {
   "promosdb": {
-    "host": "promosdb",
+    "host": "promosdbcontainer",
     "port": 5432,
     "database": "promos_api",
     "password": "12qwaszx",
