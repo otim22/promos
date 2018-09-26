@@ -1,3 +1,5 @@
+'use strict';
+
 var app = require('../server/server');
 
 app.seeder.createFactory('Promotion', {
