@@ -159,7 +159,6 @@ module.exports = {
         },
       },
     };
-
     /* eslint-disable max-len */
     promosdb.discoverModelProperties('promotions', function(err, props) {
       if (Object.keys(props).length === 0) {
