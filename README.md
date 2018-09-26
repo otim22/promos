@@ -7,10 +7,10 @@
 # Start application with --build for first time. 
 $ docker-compose up --build
 
-# Or just start the containers
+# If not first time, then just start the containers
 $ docker-compose up
 
-# Find the container name from docker running processes
+# Checkout the container name from docker running processes
 $ docker-compose ps
 
 # Execute into the container
@@ -22,13 +22,35 @@ $ npm install
 # Stop the container
 $ docker-compose stop
 
-# Start your container again foreground mode
+# Re-start your container either in foreground mode
 $ docker-compose up
 
-# Or start in background mode
+# Or in background mode
 $ docker-compose up -d
 
-# Logs
+# Logs issues
 $ docker-compose logs container_name
+
+```
+
+# Seed Data into the database
+
+```sh
+# Execute into the container
+$ docker exec -it container_name sh
+
+# Creates test data. Default 150 records.
+$ node database/migrate.js
+
+```
+
+# Run tests
+
+```sh
+# Execute into the container
+$ docker exec -it container_name sh
+
+# Then run tests.
+$ npm test
 
 ```
