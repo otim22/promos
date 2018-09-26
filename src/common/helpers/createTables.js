@@ -171,5 +171,5 @@ module.exports = {
       }
     });
     /* eslint-enable max-len */
-  }
+  },
 };
